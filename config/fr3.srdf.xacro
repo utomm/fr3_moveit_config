@@ -14,7 +14,7 @@
     <xacro:arg name="hand" default="false" />
     <xacro:if value="$(arg hand)">
         <!-- manipulator group: eef frame aligned to hand -->
-        <xacro:arm name="$(arg  )_manipulator" tip_link="$(arg arm_id)_hand_tcp" />
+        <xacro:arm name="$(arg arm_id)_manipulator" tip_link="$(arg arm_id)_hand_tcp" />
         <xacro:include filename="$(find fr3_moveit_config)/config/hand.xacro" />
         <xacro:hand />
 
