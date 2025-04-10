@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="transmission" default="position" />
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find panda_moveit_config)/config/ros_controllers.yaml" command="load"  subst_value="true"/>
+  <rosparam file="$(find fr3_moveit_config)/config/ros_controllers.yaml" command="load"  subst_value="true"/>
 
   <!-- Load and start the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
